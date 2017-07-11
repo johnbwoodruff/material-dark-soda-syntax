@@ -1,8 +1,8 @@
 {
   "name": "material-dark-soda-syntax",
   "theme": "syntax",
-  "version": "0.0.0",
-  "description": "A short description of your syntax theme",
+  "version": "0.1.0",
+  "description": "A beautiful and vibrant Material Design color theme for Atom",
   "keywords": [
     "syntax",
     "theme"
