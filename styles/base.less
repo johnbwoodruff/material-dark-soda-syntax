@@ -59,13 +59,17 @@ atom-text-editor {
 }
 
 .syntax--keyword {
-  color: @magenta;
+  color: @red;
 
   &.syntax--control {
-    color: @magenta;
+    color: @red;
   }
 
   &.syntax--operator {
+    color: @red;
+  }
+
+  &.syntax--assignment.syntax--operator {
     color: @syntax-text-color;
   }
 
@@ -79,14 +83,18 @@ atom-text-editor {
 }
 
 .syntax--storage {
-  color: @magenta;
+  color: @cyan;
+
+  &.syntax--modifier {
+    color: @red;
+  }
 }
 
 .syntax--constant {
   color: @magenta;
 
   &.syntax--character.syntax--escape {
-    color: @cyan;
+    color: @magenta;
   }
 
   &.syntax--numeric {
@@ -100,17 +108,40 @@ atom-text-editor {
   &.syntax--other.syntax--symbol {
     color: @green;
   }
+
+  &.syntax--other {
+    color: @syntax-text-color;
+  }
 }
 
 .syntax--variable {
-  color: @red;
+  color: @syntax-text-color;
 
   &.syntax--interpolation {
     color: darken(@red, 10%);
   }
 
   &.syntax--parameter.syntax--function {
-    color: @syntax-text-color;
+    color: @orange;
+  }
+
+  &.syntax--parameter {
+    color: @orange;
+  }
+}
+
+.syntax--dictionary {
+  &.syntax--key {
+    color: @cyan;
+    font-style: italic;
+
+    .syntax--string {
+      color: @cyan;
+
+      .syntax--punctuation {
+        color: @cyan;
+      }
+    }
   }
 }
 
@@ -119,12 +150,18 @@ atom-text-editor {
   color: @syntax-background-color;
 }
 
-.syntax--string {
-  color: @green;
+.syntax--regexp {
+  &.syntax--constant {
+    color: @magenta;
+  }
+}
 
+.syntax--string {
+  text-decoration: none !important;
 
   &.syntax--regexp {
-    color: @cyan;
+    color: @yellow;
+
 
     .syntax--source.syntax--ruby.syntax--embedded {
       color: @orange;
@@ -166,14 +203,17 @@ atom-text-editor {
   }
 
   &.syntax--section.syntax--embedded {
-    color: darken(@red, 10%);
+    color: @magenta;
   }
-
 }
 
 .syntax--support {
+  &.syntax--variable {
+    color: @cyan;
+  }
+
   &.syntax--class {
-    color: @green;
+    color: @cyan;
   }
 
   &.syntax--function  {
@@ -183,22 +223,25 @@ atom-text-editor {
       color: @cyan;
     }
   }
+
+  &.syntax--type.syntax--primitive {
+    color: @cyan;
+  }
 }
 
 .syntax--entity {
   &.syntax--name.syntax--function {
-    color: @cyan;
+    color: @green;
   }
   &.syntax--name.syntax--type {
-    color: lighten(@orange, 15%);
-    text-decoration: underline;
+    color: @syntax-text-color;
   }
 
   &.syntax--other.syntax--inherited-class {
     color: @green;
   }
   &.syntax--name.syntax--class, &.syntax--name.syntax--type.syntax--class {
-    color: @green;
+    color: @syntax-text-color;
   }
 
   &.syntax--name.syntax--section {
@@ -225,15 +268,9 @@ atom-text-editor {
   &.syntax--property-value.syntax--constant {
     color: @syntax-text-color;
   }
-  &.syntax--string {
-    color: @yellow;
-  }
-  &.syntax--string.syntax--definition.syntax--punctuation {
-    color: @yellow;
-  }
 }
 
-.syntax--less {
+.syntax--less, .syntax--scss {
   &.syntax--variable {
     color: @syntax-text-color;
   }
@@ -245,9 +282,18 @@ atom-text-editor {
   }
 }
 
+.syntax--string {
+  color: @yellow;
+}
+.syntax--string.syntax--definition.syntax--punctuation {
+  color: @yellow;
+}
+/*.syntax--less, .syntax--scss, .syntax--css,  {
+}*/
+
 .syntax--meta {
   &.syntax--class {
-    color: @green;
+    color: @syntax-text-color;
   }
 
   &.syntax--link {
@@ -265,6 +311,10 @@ atom-text-editor {
   &.syntax--separator {
     background-color: @gray;
     color: @syntax-text-color;
+  }
+
+  &.syntax--definition.syntax--method {
+    color: @green;
   }
 }
 
@@ -312,10 +362,40 @@ atom-text-editor {
   }
 }
 
+.syntax--source.syntax--embedded {
+  color: @syntax-text-color;
+}
+
 .syntax--source.syntax--gfm .syntax--markup {
   -webkit-font-smoothing: auto;
   &.syntax--heading {
     color: @green;
+  }
+}
+
+.syntax--gfm {
+  &.syntax--raw {
+    color: @magenta;
+
+    .syntax--link {
+      color: @magenta;
+      text-decoration: none;
+      font-style: normal;
+    }
+  }
+  .syntax--punctuation {
+    color: @gray;
+  }
+  .syntax--link {
+    color: @gray;
+
+    .syntax--entity {
+      color: @green;
+    }
+  }
+  .syntax--underline {
+    font-style: italic;
+    text-decoration: underline;
   }
 }
 
