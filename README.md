@@ -2,6 +2,6 @@
 
 A beautiful and vibrant Material Design color theme for Atom.
 
-This is a work in progress...
+It is highly recommended that you use this theme in conjunction with the [Material Dark Soda UI](https://github.com/jbw91/material-dark-soda-ui) theme.
 
-![A screenshot of your theme](https://f.cloud.github.com/assets/69169/2289498/4c3cb0ec-a009-11e3-8dbd-077ee11741e5.gif)
+![Material Dark Soda](https://raw.githubusercontent.com/jbw91/material-dark-soda-syntax/master/screenshot.png)
