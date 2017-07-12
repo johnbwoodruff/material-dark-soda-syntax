@@ -1,7 +1,7 @@
 {
   "name": "material-dark-soda-syntax",
   "theme": "syntax",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "description": "A beautiful and vibrant Material Design color theme for Atom",
   "keywords": [
     "syntax",
@@ -9,7 +9,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/jbw91/material-dark-soda-syntax.git"
+    "url": "https://github.com/jbw91/material-dark-soda-syntax"
   },
   "bugs": {
     "url": "https://github.com/jbw91/material-dark-soda-syntax/issues"
