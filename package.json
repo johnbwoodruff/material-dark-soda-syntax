@@ -7,7 +7,13 @@
     "syntax",
     "theme"
   ],
-  "repository": "https://github.com/atom/material-dark-soda-syntax",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jbw91/material-dark-soda-syntax.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jbw91/material-dark-soda-syntax/issues"
+  },
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
